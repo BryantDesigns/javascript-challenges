@@ -9,14 +9,19 @@ class Book {
     this.availableCopies = availableCopies;
   }
 
+  // Getter
   get availability() {
-    if (this.availableCopies > 10) {
-      return 'In stock';
-    } else if (this.availableCopies < 10) {
-      return 'Low stock';
-    } else {
+    return this.getAvailability();
+  }
+
+  // Method
+  getAvailability() {
+    if (this.numCopies === 0) {
       return 'Out of stock';
+    } else if (this.numCopies < 10) {
+      return 'Low stock';
     }
+    return 'In stock';
   }
 
   sell(numCopiesToSell = 1) {

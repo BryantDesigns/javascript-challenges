@@ -30,6 +30,10 @@ class Book {
   }
 }
 
+class TechnicalBook extends Book {
+  
+}
+
 /*
   WRITE YOUR SOLUTION HERE
 */
